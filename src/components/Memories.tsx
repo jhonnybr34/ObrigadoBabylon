@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { Play, Pause } from "lucide-react";
 import { useState, useRef } from "react";
 
+const MEMORY_IMAGES = [
+    '/images/memoria1.jpg',
+    '/images/memoria2.jpg',
+    '/images/memoria3.jpg',
+];
+
 const Memories = () => {
   const [playingAudio1, setPlayingAudio1] = useState(false);
   const [playingAudio2, setPlayingAudio2] = useState(false);
@@ -98,8 +104,7 @@ const Memories = () => {
               />
               <h3 className="text-2xl font-bold text-primary">O Ferreiro Miséria</h3>
               <p className="text-foreground/80 text-center leading-relaxed">
-                A história épica do ferreiro iniciante que mais caía do que batia, mas nunca desistiu. 
-                Cada morte era uma lição, cada erro uma risada compartilhada com quem teve paciência de ensinar.
+                Jhonnyyy o ferreiro pobre ferreiro miseria KKKKKKKKKKK(eu não tanko esse musica).
               </p>
             </div>
           </motion.div>
@@ -130,8 +135,8 @@ const Memories = () => {
               />
               <h3 className="text-2xl font-bold text-accent">A Lost Dynasty</h3>
               <p className="text-foreground/80 text-center leading-relaxed">
-                Com a voz de locutor profissional, Babylon narra a glória de nossa guild. 
-                A Lost Dynasty, que conquistou territórios, enfrentou desafios e deixou sua marca na história de Ragnarok.
+                O nosso locutor profissional, narrando a era de glória da nossa guild. 
+                Lost Dynasty, deixou sua marca na história de Ragnarok.
               </p>
             </div>
           </motion.div>
