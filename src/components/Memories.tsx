@@ -55,26 +55,28 @@ const Memories = () => {
         </motion.div>
 
         {/* Images Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
-        >
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="aspect-video bg-muted/20 rounded-xl border border-border overflow-hidden shadow-[var(--shadow-card)]"
-            >
-              <img
-                src={`/placeholder.svg`}
-                alt={`Registro ${i} do jogo`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-16"
+        >
+          {/* 2. Use o array de caminhos aqui */}
+          {MEMORY_IMAGES.map((src, index) => (
+            <div
+              key={src}
+              // CLASSE CORRIGIDA: Removendo 'aspect-video' e adicionando uma altura fixa
+              className="col-span-1 h-[240px] bg-muted/20 rounded-xl border border-border overflow-hidden shadow-[var(--shadow-card)]"
+            >
+              <img
+                src={src}
+                alt={`Registro ${index + 1} do jogo`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </motion.div>
 
         {/* Audio Players */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
