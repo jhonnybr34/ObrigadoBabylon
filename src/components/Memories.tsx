@@ -68,7 +68,7 @@ const Memories = () => {
               key={src}
               // CLASSE CORRIGIDA: Removendo 'aspect-video' e adicionando uma altura fixa
               className="col-span-1 h-[240px] bg-muted/20 rounded-xl border border-border overflow-hidden shadow-[var(--shadow-card)]"
-            >
+            > 
               <img
                 src={src}
                 alt={`Registro ${index + 1} do jogo`}
