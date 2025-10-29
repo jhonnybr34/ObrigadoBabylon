@@ -3,9 +3,9 @@ import { Play, Pause } from "lucide-react";
 import { useState, useRef } from "react";
 
 const MEMORY_IMAGES = [
-    'images/memoria1.jpg',
-    'images/memoria2.jpg',
-    'images/memoria3.jpg',
+    '/images/memoria1.jpg',
+    '/images/memoria2.jpg',
+    '/images/memoria3.jpg',
 ];
 
 const Memories = () => {
@@ -102,7 +102,7 @@ const Memories = () => {
               <audio
                 ref={audio1Ref}
                 onEnded={() => setPlayingAudio1(false)}
-                src="audios/ferreiro-miseria.mp3"
+                src="/audios/ferreiro-miseria.mp3"
               />
               <h3 className="text-2xl font-bold text-primary">O Ferreiro Miséria</h3>
               <p className="text-foreground/80 text-center leading-relaxed">
@@ -133,7 +133,7 @@ const Memories = () => {
               <audio
                 ref={audio2Ref}
                 onEnded={() => setPlayingAudio2(false)}
-                src="audios/lost-dynasty.mp3"
+                src="/audios/lost-dynasty.mp3"
               />
               <h3 className="text-2xl font-bold text-accent">A Lost Dynasty</h3>
               <p className="text-foreground/80 text-center leading-relaxed">
