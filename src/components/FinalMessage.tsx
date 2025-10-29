@@ -36,31 +36,30 @@ const FinalMessage = () => {
           </div>
 
           <h2 className="text-4xl font-bold text-center mb-8 text-foreground">
-            Para o Babylon
+            Parabéns Cassio! (Babylon)
           </h2>
 
           <div className="space-y-6 text-foreground/90 leading-relaxed text-lg">
             <p>
-              Sei que já faz um ano desde que você me ajudou naquele momento difícil. 
-              O tempo passou voando com todo o trabalho, mas isso nunca significou que eu esqueci.
+              Sei que já faz um ano desde que você me ajudou com a placa e a fonte. Prometi estudar para conseguir um trabalho legal, até estudei, mas não vou mentir zoei muito também rs. 
+              Consegui um trabalho tranquilo, não é dos melhores mas o tempo passou voando com toda essa experiencia nova, mas isso não quer dizer que eu esqueci.
             </p>
             
             <p>
-              Você não precisava ter feito nada daquilo. Éramos apenas dois jogadores que se conheceram 
-              no Ragnarok - eu, um ferreiro perdido, e você, que teve a paciência de me ensinar e se tornou 
-              muito mais que um companheiro de guild.
+              Tivemos momentos dificeis por conta das figurinhas, mas faz parte por isso se chama Discord de Discordia kkk.
+
             </p>
 
             <p>
-              Aquela placa de vídeo e fonte não eram apenas equipamentos. Era você acreditando em mim 
-              quando eu mais precisava. Era a prova de que amizades verdadeiras podem nascer nos lugares 
-              mais inesperados.
+              Você não precisava ter feito nada daquilo, Aquela placa de vídeo e fonte não eram apenas equipamentos. Era você acreditando em mim e no meu futuro
+              quando eu mais precisava. Por isso eu sou muito grato a você que me deu essa oportunidade tão cedo.
+              tive varias experiencias novas e necessarias. E eu nunca soube como agradecer, tanto que esqueci que eu poderia ter parcelado essa ''divida'' kkkk mas isso é prova de que amizades podem nascer nos lugares mais inesperados kk.
             </p>
 
             <p className="text-accent font-semibold">
-              Hoje, no seu aniversário, envio os 800 reais - não porque era uma dívida, mas porque 
-              quero retribuir à minha maneira. Cheguei atrasado um ano, mas meu coração sempre esteve 
-              em dia com você.
+              Hoje, no seu aniversário, envio os 924,54 reais (alguns juros de amizade kk) - não porque era uma dívida, mas porque 
+              quero retribuir à minha maneira. Cheguei atrasado um ano, mas eu sempre estive pensando em como retribuir esse presente.
+
             </p>
 
             <p className="text-center pt-8 text-2xl font-bold">
@@ -85,7 +84,7 @@ const FinalMessage = () => {
             Com gratidão eterna,
           </p>
           <p className="text-lg text-foreground/70 mt-2">
-            Seu amigo ferreiro ⚔️
+            Jhonny o ferreiro miseria ⚔️
           </p>
         </motion.div>
       </div>
