@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { Play, Pause } from "lucide-react";
 import { useState, useRef } from "react";
 
+// ✅ Caminhos absolutos (baseados na raiz do projeto)
 const MEMORY_IMAGES = [
-    '/images/memoria1.jpg',
-    '/images/memoria2.jpg',
-    '/images/memoria3.jpg',
+  "/ObrigadoBabylon/images/memoria1.jpg",
+  "/ObrigadoBabylon/images/memoria2.jpg",
+  "/ObrigadoBabylon/images/memoria3.jpg",
 ];
 
 const Memories = () => {
@@ -54,33 +55,30 @@ const Memories = () => {
           <p className="text-muted-foreground text-lg">Registros de nossa aventura</p>
         </motion.div>
 
-        {/* Images Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-16"
-        >
-          {/* 2. Use o array de caminhos aqui */}
-          {MEMORY_IMAGES.map((src, index) => (
-            <div
-              key={src}
-              // CLASSE CORRIGIDA: Removendo 'aspect-video' e adicionando uma altura fixa
-              className="col-span-1 h-[240px] bg-muted/20 rounded-xl border border-border overflow-hidden shadow-[var(--shadow-card)]"
-            > 
-              <img
-                src={src}
-                alt={`Registro ${index + 1} do jogo`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </motion.div>
+        {/* ✅ Grid de imagens com caminhos absolutos */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-16"
+        >
+          {MEMORY_IMAGES.map((src, index) => (
+            <div
+              key={src}
+              className="col-span-1 h-[240px] bg-muted/20 rounded-xl border border-border overflow-hidden shadow-[var(--shadow-card)]"
+            >
+              <img
+                src={src}
+                alt={`Registro ${index + 1} do jogo`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </motion.div>
 
-        {/* Audio Players */}
+        {/* ✅ Áudios com caminhos absolutos */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Audio 1 - Ferreiro Miséria */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -99,19 +97,20 @@ const Memories = () => {
                   <Play className="w-8 h-8 text-primary" fill="currentColor" />
                 )}
               </button>
+
+              {/* ✅ Caminho absoluto para o áudio */}
               <audio
                 ref={audio1Ref}
                 onEnded={() => setPlayingAudio1(false)}
-                src="/audios/ferreiro-miseria.mp3"
+                src="/ObrigadoBabylon/audios/ferreiro-miseria.mp3"
               />
               <h3 className="text-2xl font-bold text-primary">O Ferreiro Miséria</h3>
               <p className="text-foreground/80 text-center leading-relaxed">
-                Jhonnyyy o ferreiro pobre ferreiro miseria KKKKKKKKKKK(eu não tanko esse musica).
+                Jhonnyyy o ferreiro pobre ferreiro miséria KKKKKKKKKKK(eu não tanko essa música).
               </p>
             </div>
           </motion.div>
 
-          {/* Audio 2 - A Lost Dynasty */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -130,15 +129,17 @@ const Memories = () => {
                   <Play className="w-8 h-8 text-accent" fill="currentColor" />
                 )}
               </button>
+
+              {/* ✅ Caminho absoluto para o áudio */}
               <audio
                 ref={audio2Ref}
                 onEnded={() => setPlayingAudio2(false)}
-                src="/audios/lost-dynasty.mp3"
+                src="/ObrigadoBabylon/audios/lost-dynasty.mp3"
               />
               <h3 className="text-2xl font-bold text-accent">A Lost Dynasty</h3>
               <p className="text-foreground/80 text-center leading-relaxed">
-                O nosso locutor profissional, narrando a era de glória da nossa guild. 
-                Lost Dynasty, deixou sua marca na história de Ragnarok.
+                O nosso locutor profissional narrando a era de glória da nossa guild. 
+                Lost Dynasty deixou sua marca na história de Ragnarok.
               </p>
             </div>
           </motion.div>
