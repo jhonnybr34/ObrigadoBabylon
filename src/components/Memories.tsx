@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import { Play, Pause } from "lucide-react";
 import { useState, useRef } from "react";
 
+const BASE = import.meta.env.BASE_URL;
+
 const MEMORY_IMAGES = [
-    '/images/memoria1.jpg',
-    '/images/memoria2.jpg',
-    '/images/memoria3.jpg',
+  `${BASE}images/memoria1.jpg`,
+  `${BASE}images/memoria2.jpg`,
+  `${BASE}images/memoria3.jpg`,
 ];
 
 const Memories = () => {
@@ -50,33 +52,35 @@ const Memories = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 text-foreground">Memórias de Ragnarok</h2>
-          <p className="text-muted-foreground text-lg">Registros de nossa aventura</p>
+          <h2 className="text-5xl font-bold mb-4 text-foreground">
+            Memórias de Ragnarok
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Registros de nossa aventura
+          </p>
         </motion.div>
 
         {/* Images Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-16"
-        >
-          {/* 2. Use o array de caminhos aqui */}
-          {MEMORY_IMAGES.map((src, index) => (
-            <div
-              key={src}
-              // CLASSE CORRIGIDA: Removendo 'aspect-video' e adicionando uma altura fixa
-              className="col-span-1 h-[240px] bg-muted/20 rounded-xl border border-border overflow-hidden shadow-[var(--shadow-card)]"
-            > 
-              <img
-                src={src}
-                alt={`Registro ${index + 1} do jogo`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-16"
+        >
+          {MEMORY_IMAGES.map((src, index) => (
+            <div
+              key={src}
+              className="col-span-1 h-[240px] bg-muted/20 rounded-xl border border-border overflow-hidden shadow-[var(--shadow-card)]"
+            >
+              <img
+                src={src}
+                alt={`Memória ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </motion.div>
 
         {/* Audio Players */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -102,11 +106,11 @@ const Memories = () => {
               <audio
                 ref={audio1Ref}
                 onEnded={() => setPlayingAudio1(false)}
-                src="/audios/ferreiro-miseria.mp3"
+                src={`${BASE}audios/ferreiro-miseria.mp3`}
               />
               <h3 className="text-2xl font-bold text-primary">O Ferreiro Miséria</h3>
               <p className="text-foreground/80 text-center leading-relaxed">
-                Jhonnyyy o ferreiro pobre ferreiro miseria KKKKKKKKKKK(eu não tanko esse musica).
+                Jhonnyyy o ferreiro pobre ferreiro miseria KKKKKKKKKKK (eu não tanko essa música).
               </p>
             </div>
           </motion.div>
@@ -133,12 +137,12 @@ const Memories = () => {
               <audio
                 ref={audio2Ref}
                 onEnded={() => setPlayingAudio2(false)}
-                src="/audios/lost-dynasty.mp3"
+                src={`${BASE}audios/lost-dynasty.mp3`}
               />
               <h3 className="text-2xl font-bold text-accent">A Lost Dynasty</h3>
               <p className="text-foreground/80 text-center leading-relaxed">
-                O nosso locutor profissional, narrando a era de glória da nossa guild. 
-                Lost Dynasty, deixou sua marca na história de Ragnarok.
+                O nosso locutor profissional, narrando a era de glória da nossa guild.
+                Lost Dynasty deixou sua marca na história de Ragnarok.
               </p>
             </div>
           </motion.div>
