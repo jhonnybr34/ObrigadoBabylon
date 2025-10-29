@@ -60,7 +60,7 @@ const Memories = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-1 mb-16"
+          className="grid grid-cols-1 md:grid-cols-5 gap-1 mb-16"
         >
           {/* 2. Use o array de caminhos aqui */}
           {MEMORY_IMAGES.map((src, index) => (
